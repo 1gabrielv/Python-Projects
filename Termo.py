@@ -1,9 +1,10 @@
 import random
 
-word = ''
-letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-for x in range(5):
-    word += random.choice(letters)
+words = ['apple', 'bread', 'chair', 'dance', 'eagle', 'flare', 'grape', 'house', 'image', 'joker',
+         'knife', 'lemon', 'magic', 'night', 'ocean', 'peach', 'queen', 'robot', 'sugar', 'tiger',
+         'unity', 'voice', 'water', 'xenon', 'yield', 'zebra', 'blaze', 'crisp', 'dwarf', 'frost']
+
+word = random.choice(words)
 
 print(f'Generated word: {word}')
 print(f'RULES: \n1° - If the letter is uppercase, its position is correct. \n'
@@ -11,12 +12,16 @@ print(f'RULES: \n1° - If the letter is uppercase, its position is correct. \n'
       "3° - If it appears as '_', the letter is not in the word. \n")
 
 cont = 0
+points = 0
+
 while(True):
     WordTry = []
     if(cont == 0):
         Try1 = input("Type your first attempt: \n")
         if(word == Try1):
+            points = 5
             print("🎉 Congratulations!!! You won!!! 🎉")
+            print(f"🌟 You scored {points} points! 🌟")
             break
 
         elif(len(Try1)!=5):
@@ -42,7 +47,9 @@ while(True):
     if(cont == 1):
         Try2 = input("Type your second attempt: \n")
         if(word == Try2):
+            points = 4
             print("🎉 Congratulations!!! You won!!! 🎉")
+            print(f"🌟 You scored {points} points! 🌟")
             break
 
         elif(len(Try2)!=5):
@@ -68,7 +75,9 @@ while(True):
     if(cont == 2):
         Try3 = input("Type your third attempt: \n")
         if(word == Try3):
+            points = 3
             print("🎉 Congratulations!!! You won!!! 🎉")
+            print(f"🌟 You scored {points} points! 🌟")
             break
 
         elif(len(Try3)!=5):
@@ -94,7 +103,9 @@ while(True):
     if(cont == 3):
         Try4= input("Type your fourth attempt: \n")
         if(word == Try4):
+            points = 2
             print("🎉 Congratulations!!! You won!!! 🎉")
+            print(f"🌟 You scored {points} points! 🌟")
             break
 
         elif(len(Try4)!=5):
@@ -120,7 +131,9 @@ while(True):
     if(cont == 4):
         Try5 = input("Type your fifth attempt: \n")
         if(word == Try5):
+            points = 1
             print("🎉 Congratulations!!! You won!!! 🎉")
+            print(f"🌟 You scored {points} points! 🌟")
             break
 
         elif(len(Try5)!=5):
