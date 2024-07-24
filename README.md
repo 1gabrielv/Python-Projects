@@ -2,4 +2,4 @@
 Folder for Python projects.
 Project examples:
    * Termo Game
-   * Passoword Generator
+   * Passoword/Email Generator
